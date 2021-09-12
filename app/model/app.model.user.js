@@ -10,7 +10,7 @@ var User = function (user) {
 };
 
 User.getlistUsers = function getlistUser(result) {
-    pool.query("call user_s(null)", function (error, response) {
+    pool.query("call user_s()", function (error, response) {
         if (error) {
             result(null, error);
         } else {
